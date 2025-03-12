@@ -45,6 +45,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    const tabs = document.querySelectorAll('[data-js-tabs]');
+
+    if (tabs) {
+        tabs.forEach(tab => {
+            const tabTriggers = tab.querySelectorAll('[data-js-tabs-trigger]');
+
+            tabTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (ev) => {
+                    const triggerElement = ev.currentTarget;
+                    const valueTriggerData = triggerElement.dataset.jsTabsTrigger;
+                    const elementData = tab.querySelector(`[data-js-tabs-element=${valueTriggerData}]`)
+                    if (valueTriggerData && elementData) {
+                        tab.querySelector('[data-js-tabs-trigger].active').classList.remove('active');
+                        tab.querySelector('[data-js-tabs-element].active').classList.remove('active');
+
+                        triggerElement.classList.add('active');
+                        elementData.classList.add('active');
+                    }
+                })
+            })
+        })
+    }
+
 
     function overlayTrigger() {
         const overlay = document.querySelector('[data-js-overlay]');
