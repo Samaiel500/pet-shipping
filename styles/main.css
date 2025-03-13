@@ -615,6 +615,35 @@ a {
     grid-template-rows: 1fr;
 }
 
+.our-advantages__swiper {
+    padding-bottom: 40px;
+}
+
+.advantages {
+    padding: 30px;
+    background: var(--blue-background);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    min-height: 204px;
+}
+
+.advantages__icon-wrap {
+    flex-shrink: 0;
+    width: 46px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advantages__text {
+    font: 600 20px/1.3 var(--font-family);
+    color: var(--black);
+}
 
 
 
@@ -881,7 +910,8 @@ a {
 
     .mobile-menu__tel,
     .services-item__title,
-    .tabs-element__title {
+    .tabs-element__title,
+    .advantages__text {
         font-size: 16px;
     }
 
@@ -900,5 +930,17 @@ a {
 
     .tabs-element {
         padding: 20px;
+    }
+
+    .advantages {
+        padding: 20px;
+        flex-direction: row;
+        column-gap: 10px;
+        min-height: 103px;
+    }
+
+    .advantages__icon-wrap {
+        align-self: flex-start;
+        width: 36px;
     }
 }

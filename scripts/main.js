@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
           
             pagination: {
               el: '.services__swiper-pagination',
+              clickable: true,
             },
 
             breakpoints: {
@@ -41,6 +42,56 @@ document.addEventListener('DOMContentLoaded', function() {
                 1024: {
                     slidesPerView: 4,
                 }
+            }
+        });
+    }
+
+    const advantagesSwiper = document.querySelector('.our-advantages__swiper');
+    if (advantagesSwiper) {
+        const swiperAdvantages = new Swiper(advantagesSwiper, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grid: {
+                rows: 1,
+                fill: "row",
+            },
+            pagination: {
+                el: ".our-advantages__swiper-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+                319: {
+                    slidesPerView: 1,
+                    grid: {
+                        rows: 1,
+                        fill: "row",
+                    },
+                },
+
+                428: {
+                    slidesPerView: 2,
+                    grid: {
+                        rows: 1,
+                        fill: "row",
+                    },
+                },
+
+                768: {
+                    slidesPerView: 3,
+                    grid: {
+                        rows: 1,
+                        fill: "row",
+                    },
+                },
+
+                1024: {
+                    slidesPerView: 4,
+                    grid: {
+                        rows: 2,
+                        fill: "row",
+                    },
+                },
             }
         });
     }
