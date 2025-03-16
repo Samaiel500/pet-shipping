@@ -96,6 +96,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    const gallerySwiper = document.querySelector('.gallery__swiper');
+    if (gallerySwiper) {
+        const swiperGallery = new Swiper(gallerySwiper, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          
+            pagination: {
+              el: '.gallery__swiper-pagination',
+              clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.gallery__swiper-button-next',
+                prevEl: '.gallery__swiper-button-prev',
+            },
+
+            breakpoints: {
+                319: {
+                    slidesPerView: 1,
+                },
+
+                427: {
+                    slidesPerView: 2,
+                },
+
+                767: {
+                    slidesPerView: 3,
+                },
+                
+                1024: {
+                    slidesPerView: 4,
+                }
+            }
+        });
+    }
+
     const tabs = document.querySelectorAll('[data-js-tabs]');
 
     if (tabs) {
