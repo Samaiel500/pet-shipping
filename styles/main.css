@@ -16,6 +16,10 @@
     --second-family: "Inter", sans-serif;
 }
 
+input {
+    accent-color: var(--blue);
+}
+
 body {
     font: 400 18px/1.5 var(--font-family);
     color: var(--gray);
@@ -938,6 +942,87 @@ a {
     grid-column: 4/5;
 }
 
+.callback-popup {
+    display: none;
+    border-radius: 10px;
+    padding: 40px;
+    background: var(--white);
+    max-width: 670px;
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+}
+
+.callback-popup.active {
+    display: block;
+}
+
+.callback-popup__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+}
+
+.callback-popup__title {
+    font: 700 36px/1.2 var(--font-family);
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.callback-popup__subtitle {
+    margin-bottom: 20px;
+}
+
+.main-form {
+    display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+}
+
+.main-form__input {
+    background: var(--blue-background);
+    border-radius: 6px;
+    border: none;
+    height: 60px;
+    width: 100%;
+    padding: 18px 20px;
+    font: 400 16px/1.5 var(--font-family);
+    color: var(--gray);
+}
+
+.main-form__btn {
+    width: 100%;
+}
+
+.main-form__rules {
+    display: flex;
+    column-gap: 5px;
+    align-items: flex-start;
+}
+
+.main-form__checkbox {
+    margin-top: 5px;
+}
+
+.main-form__rules-text {
+    font: 400 14px/1.5 var(--font-family);
+    color: #444551;
+}
+
+.main-form__rules-text a {
+    color: #444551;
+    font-weight: 400;
+}
+
+.iti {
+    width: 100%;
+}
+
 
 
 
@@ -1372,6 +1457,23 @@ a {
         align-items: center;
         column-gap: 26px;
     }
+
+    .callback-popup {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 0;
+        padding: 60px 20px;
+    }
+
+    .callback-popup__title {
+        font-size: 30px;
+    }
+
+    .callback-popup__subtitle {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 427px) {
@@ -1396,7 +1498,11 @@ a {
     .accordion__text,
     .bottom-section-link,
     .section-bottom__text,
-    .footer, .footer a {
+    .footer, .footer a,
+    .callback-popup__subtitle,
+    .main-form__rules-text,
+    .main-form__rules-text a,
+    .main-form__input {
         font-size: 13px;
     }
 
@@ -1473,7 +1579,20 @@ a {
         height: 40px;
     }
 
-    .section-bottom__title {
+    .section-bottom__title,
+    .callback-popup__title {
         font-size: 22px;
+    }
+
+    .main-form__input {
+        height: 50px;
+    }
+
+    .btn {
+        padding-block: 19px;
+    }
+
+    .main-form {
+        row-gap: 10px;
     }
 }

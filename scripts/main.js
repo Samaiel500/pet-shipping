@@ -155,11 +155,57 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    const input = document.querySelector("#tel");
+    window.intlTelInput(input, {
+        // i18n: ru,
+        initialCountry: "ru",
+        loadUtils: () => import("../scripts/lib/utils.js"),
+    });
+
+    const popupBtns = document.querySelectorAll('[data-js-popup-show]');
+    if (popupBtns) {
+        popupBtns.forEach(popupBtn => {
+            popupBtn.addEventListener('click', function(ev) {
+                const btn = ev.currentTarget;
+                const popupId = btn.dataset.jsPopupShow;
+                if (popupId) {
+                    const popup = document.querySelector(`[data-js-popup=${popupId}]`);
+                    overlayTrigger();
+                    popup.classList.add('active');
+                }
+                
+            })
+        })
+    }
+
+    const popupBtnClose = document.querySelectorAll('[data-js-popup-close]');
+    if (popupBtnClose) {
+        popupBtnClose.forEach(btnClose => {
+            btnClose.addEventListener('click', function(ev) {
+                const windowPopup = ev.currentTarget.closest('[data-js-popup]');
+                windowPopup.classList.remove('active');
+                overlayTrigger();
+            })
+        })
+    }
 
     function overlayTrigger() {
         const overlay = document.querySelector('[data-js-overlay]');
         if (overlay) {
             overlay.classList.toggle('active');
+            if (overlay.classList.contains('active')) {
+                scrollLock();
+                return;
+            }
+            scrollUnLock();
         }
+    }
+
+    function scrollLock() {
+        document.body.style.overflow = 'hidden';
+    }
+
+    function scrollUnLock() {
+        document.body.style.overflow = 'unset';
     }
 })

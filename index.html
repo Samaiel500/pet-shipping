@@ -7,8 +7,10 @@
     <title>Перевозка домашних животных по всему миру</title>
     <link rel="stylesheet" href="./styles/normolize.css">
     <link rel="stylesheet" href="./styles/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./styles/lib/intlTelInput.css">
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./scripts/lib/swiper-bundle.min.js" defer></script>
+    <script src="./scripts/lib/intlTelInput.min.js" defer></script>
     <script src="./scripts/main.js" defer></script>
 </head>
 
@@ -70,7 +72,7 @@
                             </ul>
                         </div>
 
-                        <button class="btn header__btn" type="button">Заказать звонок</button>
+                        <button class="btn header__btn" type="button" data-js-popup-show="callback-popup">Заказать звонок</button>
                     </div>
 
                     <button type="button" class="burger" data-js-burger-open>
@@ -82,7 +84,7 @@
                     <h1 class="header__title">Перевозка<br> домашних животных<br> по всему миру</h1>
                     <p class="header__descr">Доставим питомца за границу бережно и с любовью.<br> Оформим за вас все
                         необходимые документы и справки.</p>
-                    <button class="header__body-btn btn btn--light" type="button">Заказать перевозку</button>
+                    <button class="header__body-btn btn btn--light" type="button" data-js-popup-show="callback-popup">Заказать перевозку</button>
                 </div>
             </div>
             <div class="mobile-menu" data-js-mobile-menu>
@@ -161,7 +163,7 @@
                             </ul>
                         </div>
 
-                        <button class="mobile-menu__btn btn btn--light" type="button">Заказать звонок</button>
+                        <button class="mobile-menu__btn btn btn--light" type="button" data-js-popup-show="callback-popup">Заказать звонок</button>
                     </div>
                 </div>
             </div>
@@ -971,7 +973,7 @@
                     <div class="section-bottom__info">
                         <h3 class="section-bottom__title">Получите быстрый расчёт стоимости и условий перевозки</h3>
                         <p class="section-bottom__text">Ответьте на 3 вопроса и узнайте подробности о перевозке и стоимость. Результаты пришлем в мессенджер.</p>
-                        <a href="/" class="btn btn--light section-bottom__btn">Заказать перевозку</a>
+                        <a href="/" class="btn btn--light section-bottom__btn" data-js-popup-show="callback-popup">Заказать перевозку</a>
                     </div>
                     <div class="section-bottom__img-wrpa">
                         <svg class="section-bottom__circle section-bottom__circle--1" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1074,8 +1076,7 @@
                             <div class="footer-contacts__item">
                                 <img src="./images/loacation-blue.svg" alt="" class="footer-contacts__icon">
                                 <div class="footer-contacts__info">
-                                    <p class="footer-contacts__text">Москва, вн.тер.г. муниципальный округ Даниловский район, ул. Автозаводская, д. 23, стр. 928, 
-                                        офис 13, помещ. 113/3.</p>
+                                    <p class="footer-contacts__text">Москва, вн.тер.г. муниципальный округ Даниловский район, ул. Автозаводская, д. 23, стр. 928, офис 13, помещ. 113/3.</p>
                                 </div>
                             </div>
                             <div class="footer-contacts__item">
@@ -1121,11 +1122,34 @@
                     <a href="" class="footer__bottom-link">Политика конфиденциальности</a>
                 </div>
             </div>
-
-
         </footer>
     </div>
     <div class="overlay" data-js-overlay></div>
+
+    <div class="callback-popup" id="callback-popup" data-js-popup="callback-popup">
+        <button class="callback-popup__close">
+            <img src="./images/header/burger-close.svg" alt="" class="callback-popup__close-img" data-js-popup-close>
+        </button>
+        <div class="callback-popup__inner">
+            <h6 class="callback-popup__title">Заказать звонок</h6>
+            <p class="callback-popup__subtitle">Оставьте заявку, наш специалист свяжется с вами в ближайшее время.</p>
+            <form action="" class="callback-popup__form main-form">
+                <div class="main-form__input-wrap">
+                    <input type="text" class="main-form__input" name="name" placeholder="Имя">
+                </div>
+                <div class="main-form__input-wrap">
+                    <input type="tel" class="main-form__input tel" name="tel" id="tel">
+                </div>
+                <div class="main-form__btn-wrap">
+                    <button type="submit" class="main-form__btn btn btn--light">Заказать звонок</button>
+                </div>
+                <div class="main-form__rules">
+                    <input type="checkbox" class="main-form__checkbox">
+                    <div class="main-form__rules-text">Нажимая на кнопку, вы соглашаетесь с <a href="/">Политикой конфиденциальности</a>.</div>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
