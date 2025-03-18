@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuClose = mobileMenu.querySelector('[data-js-mobile-menu-close]');
 
         burgerTriger.addEventListener('click', function() {
-            overlayTrigger()
+            overlayOpen();
             mobileMenu.classList.add('active');
         })
 
         mobileMenuClose.addEventListener('click', function() {
-            overlayTrigger()
+            overlayClose();
             mobileMenu.classList.remove('active');
         })
     }
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const popupId = btn.dataset.jsPopupShow;
                 if (popupId) {
                     const popup = document.querySelector(`[data-js-popup=${popupId}]`);
-                    overlayTrigger();
+                    overlayOpen();
                     popup.classList.add('active');
                 }
                 
@@ -184,9 +184,25 @@ document.addEventListener('DOMContentLoaded', function() {
             btnClose.addEventListener('click', function(ev) {
                 const windowPopup = ev.currentTarget.closest('[data-js-popup]');
                 windowPopup.classList.remove('active');
-                overlayTrigger();
+                overlayClose();
             })
         })
+    }
+
+    function overlayOpen() {
+        const overlay = document.querySelector('[data-js-overlay]');
+        if (overlay) {
+            overlay.classList.add('active');
+            scrollLock();
+        }
+    }
+
+    function overlayClose() {
+        const overlay = document.querySelector('[data-js-overlay]');
+        if (overlay) {
+            overlay.classList.remove('active');
+            scrollUnLock();
+        }
     }
 
     function overlayTrigger() {
