@@ -189,6 +189,21 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    const moreInfoWraps = document.querySelectorAll('[data-js-more]');
+    if (moreInfoWraps) {
+        moreInfoWraps.forEach(moreWrap => {
+            const moreBtn = moreWrap.querySelector('[data-js-more-btn]');
+            const moreHiddenEl = moreWrap.querySelectorAll('[data-js-more-hidden]');
+            
+            moreBtn.addEventListener('click', function() {
+                moreHiddenEl.forEach(el => {
+                    el.classList.add('active');
+                })
+                moreBtn.classList.add('hidden')
+            })
+        })
+    }
+
     function overlayOpen() {
         const overlay = document.querySelector('[data-js-overlay]');
         if (overlay) {
