@@ -46,6 +46,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    const servicesLicenses = document.querySelector('.licenses__swiper');
+    if (servicesLicenses) {
+        const swiperLicenses = new Swiper(servicesLicenses, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          
+            pagination: {
+              el: '.licenses__swiper-pagination',
+              clickable: true,
+            },
+
+            breakpoints: {
+                319: {
+                    slidesPerView: 1,
+                },
+
+                427: {
+                    slidesPerView: 2,
+                },
+
+                767: {
+                    slidesPerView: 3,
+                },
+                
+                1024: {
+                    slidesPerView: 4,
+                }
+            }
+        });
+    }
+
     const advantagesSwiper = document.querySelector('.our-advantages__swiper');
     if (advantagesSwiper) {
         const swiperAdvantages = new Swiper(advantagesSwiper, {
