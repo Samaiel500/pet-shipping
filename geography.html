@@ -16,9 +16,9 @@
 
 <body>
     <div class="wrapper">
-        <header class="header header--main">
+        <header class="header">
             <div class="header__inner container">
-                <div class="header__top layer-top">
+                <div class="header__top layer-top header__top--grey">
                     <a href="./index.html" class="header__logo logo">
                         <img src="./images/logo.png" alt="logo" class="logo__img">
                     </a>
@@ -78,13 +78,6 @@
                     <button type="button" class="burger" data-js-burger-open>
                         <img src="./images/header/burger.svg" alt="" class="burger__img">
                     </button>
-                </div>
-
-                <div class="header__body layer-top">
-                    <h1 class="header__title">Перевозка<br> домашних животных<br> по всему миру</h1>
-                    <p class="header__descr">Доставим питомца за границу бережно и с любовью.<br> Оформим за вас все
-                        необходимые документы и справки.</p>
-                    <button class="header__body-btn btn btn--light" type="button" data-js-popup-show="callback-popup">Заказать перевозку</button>
                 </div>
             </div>
             <div class="mobile-menu" data-js-mobile-menu>
@@ -170,86 +163,22 @@
         </header>
 
         <main class="main">
-            <section class="section section--grey">
-                <div class="section__header container">
-                    <h2 class="section__title title">Услуги</h2>
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__inner container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__list-item">
+                            <a href="./index.html" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__list-item">
+                            <a href="./services.html" class="breadcrumbs__link">География</a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="services">
-
-                    <div class="services__inner container">
-                        <div class="swiper services__swiper">
-                            <div class="swiper-wrapper services__swiper-wrapper">
-                                <div class="swiper-slide services__swiper-slide">
-                                    <a href="/" class="services-item"
-                                        style="--bg-services: url('../images/services/services-1.png')">
-                                        <p class="services-item__title layer-top">Рассчитать стоимость перевозки питомца
-                                        </p>
-                                        <span class="services-item__arrow layer-top">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 8L14.75 8M14.75 8L8.375 14.375M14.75 8L8.375 1.625"
-                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide services__swiper-slide">
-                                    <a href="/" class="services-item"
-                                        style="--bg-services: url('../images/services/services-2.png')">
-                                        <p class="services-item__title layer-top">Консультация по перевозке питомца</p>
-                                        <span class="services-item__arrow layer-top">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 8L14.75 8M14.75 8L8.375 14.375M14.75 8L8.375 1.625"
-                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide services__swiper-slide">
-                                    <a href="/" class="services-item"
-                                        style="--bg-services: url('../images/services/services-3.png')">
-                                        <p class="services-item__title layer-top">Консультация + сопровождение</p>
-                                        <span class="services-item__arrow layer-top">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 8L14.75 8M14.75 8L8.375 14.375M14.75 8L8.375 1.625"
-                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide services__swiper-slide">
-                                    <a href="/" class="services-item"
-                                        style="--bg-services: url('../images/services/services-4.png')">
-                                        <p class="services-item__title layer-top">Помощь в подготовке документов</p>
-                                        <span class="services-item__arrow layer-top">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 8L14.75 8M14.75 8L8.375 14.375M14.75 8L8.375 1.625"
-                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="swiper-pagination services__swiper-pagination main-pagination"></div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </section>
-
-            <section class="section section--grey section--bottom-radius">
+            <section class="section">
                 <div class="section__header container">
-                    <h2 class="section__title title">География доставок</h2>
+                    <h2 class="section__title title-second">География доставок животных</h2>
                 </div>
 
                 <div class="tabs" data-js-tabs>
@@ -257,28 +186,28 @@
                         <div class="tabs__header">
                             <ul class="tabs__list-trigger">
                                 <li class="tabs__list-item-trigger">
-                                    <button class="tabs__btn-trugger active" type="button"
+                                    <button class="tabs__btn-trugger tabs__btn-trugger--grey active" type="button"
                                         data-js-tabs-trigger="north-america">Доставка животных в Северную
                                         Америку</button>
                                 </li>
                                 <li class="tabs__list-item-trigger">
-                                    <button class="tabs__btn-trugger" type="button"
+                                    <button class="tabs__btn-trugger tabs__btn-trugger--grey" type="button"
                                         data-js-tabs-trigger="south-america">Доставка животных в Южную Америку</button>
                                 </li>
                                 <li class="tabs__list-item-trigger">
-                                    <button class="tabs__btn-trugger" type="button"
+                                    <button class="tabs__btn-trugger tabs__btn-trugger--grey" type="button"
                                         data-js-tabs-trigger="middle-east">Доставка животных на Ближний Восток</button>
                                 </li>
                                 <li class="tabs__list-item-trigger">
-                                    <button class="tabs__btn-trugger" type="button"
+                                    <button class="tabs__btn-trugger tabs__btn-trugger--grey" type="button"
                                         data-js-tabs-trigger="africa">Доставка животных в Африку</button>
                                 </li>
                                 <li class="tabs__list-item-trigger">
-                                    <button class="tabs__btn-trugger" type="button"
+                                    <button class="tabs__btn-trugger tabs__btn-trugger--grey" type="button"
                                         data-js-tabs-trigger="europe">Доставка животных в Европу</button>
                                 </li>
                                 <li class="tabs__list-item-trigger">
-                                    <button class="tabs__btn-trugger" type="button" data-js-tabs-trigger="asia">Доставка
+                                    <button class="tabs__btn-trugger tabs__btn-trugger--grey" type="button" data-js-tabs-trigger="asia">Доставка
                                         животных в Азию</button>
                                 </li>
                             </ul>
@@ -653,319 +582,239 @@
             </section>
 
             <section class="section">
-
-                <div class="about-us">
-                    <div class="about-us_inner container">
-                        <div class="about-us__img-wrap layout-bg layout-bg--left">
-                            <img src="./images/about-us/about-us.png" width="640" height="663" alt="" class="about-us__img layout-bg__img">
-                        </div>
-                        <div class="about-us__descr">
-                            <h2 class="about-us__title title">О нас</h2>
-                            <div class="about-us__text text-600">Я — Камила Азимова, и я являюсь основателем компании
-                                PET SHIPPING GROUP. В прошлом работала в сфере авиации, мне доводилось бывать в разных
-                                уголках нашей планеты и практически ежедневно сталкивалась с тем как люди задаются
-                                вопросом, как перевезти своего питомца, ведь требование к перевозке у различных
-                                авиакомпаний и стран очень сильно могут отличаться. </div>
-                            <div class="about-us__text">В то время и зародилась идея создать такой сервис, который будет
-                                помогать людям перевезти питомцев. Я набрала большой, опыт и знания в сфере перевозки
-                                животных, собрала команду которая с большой любовью и теплотой относятся к четвероногим
-                                друзьям и сегодня мы ежедневно перевозим питомцев в самые разные уголки нашей планеты.
-                            </div>
-                            <a href="/" class="about-us__btn btn btn--light">Подробнее о нас</a>
-                        </div>
-
-                        <div class="accordion about-us__accordion">
-                            <details class="accordion__details">
-                                <summary class="accordion__summary">
-                                    <h2 class="about-us__title title">О нас</h2>
-                                    <span class="accordion__icon"></span>
-                                </summary>
-                            </details>
-                            <div class="accordion__content">
-                                <div class="accordion__content-inner">
-                                    <div class="accordion__content-body">
-                                        <div class="about-us__text text-600">Я — Камила Азимова, и я являюсь основателем
-                                            компании PET SHIPPING GROUP. В прошлом работала в сфере авиации, мне
-                                            доводилось бывать в разных уголках нашей планеты и практически ежедневно
-                                            сталкивалась с тем как люди задаются вопросом, как перевезти своего питомца,
-                                            ведь требование к перевозке у различных авиакомпаний и стран очень сильно
-                                            могут отличаться. </div>
-                                        <div class="about-us__text">В то время и зародилась идея создать такой сервис,
-                                            который будет помогать людям перевезти питомцев. Я набрала большой, опыт и
-                                            знания в сфере перевозки животных, собрала команду которая с большой любовью
-                                            и теплотой относятся к четвероногим друзьям и сегодня мы ежедневно перевозим
-                                            питомцев в самые разные уголки нашей планеты.</div>
-                                        <a href="/" class="about-us__btn btn btn--light">Подробнее о нас</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="section">
                 <div class="section__header container">
-                    <h2 class="section__title title">Наши преимущества</h2>
+                    <h2 class="section__title title-second">Наши направления</h2>
                 </div>
 
-                <div class="our-advantages">
-                    <div class="our-advantages__inner container">
-
-                        <div class="swiper our-advantages__swiper">
-                            <div class="swiper-wrapper our-advantages__swiper-wrapper">
-                                <div class="swiper-slide our-advantages__swiper-slide">
-                                    <div class="advantages">
-                                        <div class="advantages__icon-wrap">
-                                            <img src="./images/advantages/advantages-1.svg" alt="" class="advantages__icon">
+                <div class="our-directions">
+                    <div class="our-directions__inner container" data-js-more>
+                        <div class="our-directions__wrap-list">
+                            <ul class="our-directions__list">
+                                <li class="our-directions__list-item">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-1.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">США</p>
+                                            <p class="direction__price">от 50 000 руб.</p>
                                         </div>
-                                        <p class="advantages__text">Работаем официально с заключением договора</p>
                                     </div>
-                                </div>
-                                <div class="swiper-slide our-advantages__swiper-slide">
-                                    <div class="advantages">
-                                        <div class="advantages__icon-wrap">
-                                            <img src="./images/advantages/advantages-2.svg" alt="" class="advantages__icon">
+                                </li>
+                                <li class="our-directions__list-item">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-2.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Канада</p>
+                                            <p class="direction__price">от 42 000 руб.</p>
                                         </div>
-                                        <p class="advantages__text">Официальный коммерческий ввоз</p>
                                     </div>
-                                </div>
-                                <div class="swiper-slide our-advantages__swiper-slide">
-                                    <div class="advantages">
-                                        <div class="advantages__icon-wrap">
-                                            <img src="./images/advantages/advantages-3.svg" alt="" class="advantages__icon">
+                                </li>
+                                <li class="our-directions__list-item">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-3.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Колумбия</p>
+                                            <p class="direction__price">от 35 000 руб.</p>
                                         </div>
-                                        <p class="advantages__text">Оформление документов без вашего присутствия на
-                                            вывоз</p>
                                     </div>
-                                </div>
-                                <div class="swiper-slide our-advantages__swiper-slide">
-                                    <div class="advantages">
-                                        <div class="advantages__icon-wrap">
-                                            <img src="./images/advantages/advantages-4.svg" alt="" class="advantages__icon">
+                                </li>
+                                <li class="our-directions__list-item">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-4.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Бразилия</p>
+                                            <p class="direction__price">от 42 000 руб.</p>
                                         </div>
-                                        <p class="advantages__text">Организовываем перевозку из регионов</p>
                                     </div>
-                                </div>
-                                <div class="swiper-slide our-advantages__swiper-slide">
-                                    <div class="advantages">
-                                        <div class="advantages__icon-wrap">
-                                            <img src="./images/advantages/advantages-5.svg" alt="" class="advantages__icon">
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="1024">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-5.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Мексика</p>
+                                            <p class="direction__price">от 42 000 руб.</p>
                                         </div>
-                                        <p class="advantages__text">Адресный забор питомца из Москвы, МО, СБП</p>
                                     </div>
-                                </div>
-                                <div class="swiper-slide our-advantages__swiper-slide">
-                                    <div class="advantages">
-                                        <div class="advantages__icon-wrap">
-                                            <img src="./images/advantages/advantages-6.svg" alt="" class="advantages__icon">
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="1024">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-6.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Чили</p>
+                                            <p class="direction__price">от 42 000 руб.</p>
                                         </div>
-                                        <p class="advantages__text">Организовываем домашнюю передержку</p>
                                     </div>
-                                </div>
-                                <div class="swiper-slide our-advantages__swiper-slide">
-                                    <div class="advantages">
-                                        <div class="advantages__icon-wrap">
-                                            <img src="./images/advantages/advantages-7.svg" alt="" class="advantages__icon">
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="1299">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-7.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Аргентина</p>
+                                            <p class="direction__price">от 35 000 руб.</p>
                                         </div>
-                                        <p class="advantages__text">Фото / видео отчёт в течении всей поездки</p>
                                     </div>
-                                </div>
-                                <div class="swiper-slide our-advantages__swiper-slide">
-                                    <div class="advantages">
-                                        <div class="advantages__icon-wrap">
-                                            <img src="./images/advantages/advantages-8.svg" alt="" class="advantages__icon">
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="1299">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-8.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Южная Корея</p>
+                                            <p class="direction__price">от 32 000 руб.</p>
                                         </div>
-                                        <p class="advantages__text">Принимаем оплату удобным для вас способом</p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination our-advantages__swiper-pagination main-pagination"></div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="1299">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-9.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Англия</p>
+                                            <p class="direction__price">от 32 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="1299">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-10.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Европа</p>
+                                            <p class="direction__price">от 50 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="1299">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-11.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Черногория</p>
+                                            <p class="direction__price">от 35 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="1299">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-12.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Сербия</p>
+                                            <p class="direction__price">от 50 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-13.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Дубай</p>
+                                            <p class="direction__price">от 32 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-14.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Израиль</p>
+                                            <p class="direction__price">от 50 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-15.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">ЮАР</p>
+                                            <p class="direction__price">от 35 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-16.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Япония</p>
+                                            <p class="direction__price">от 50 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-17.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Сингапур</p>
+                                            <p class="direction__price">от 32 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-18.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Филиппины</p>
+                                            <p class="direction__price">от 50 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-19.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Бахрейн</p>
+                                            <p class="direction__price">от 35 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-20.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Саудовская Аравия</p>
+                                            <p class="direction__price">от 50 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-21.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Иордания</p>
+                                            <p class="direction__price">от 32 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-22.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Таиланд</p>
+                                            <p class="direction__price">от 50 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-23.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Тайвань</p>
+                                            <p class="direction__price">от 35 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="our-directions__list-item" data-js-more-hidden="no">
+                                    <div class="direction">
+                                        <img src="./images/our-directions/flag-24.svg" alt="" width="60" height="40" class="direction__img-flag">
+                                        <div class="direction__info">
+                                            <p class="direction__name">Малайзия</p>
+                                            <p class="direction__price">от 50 000 руб.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="section__header container">
-                    <h2 class="section__title title">Галерея</h2>
-                </div>
-
-                <div class="gallery">
-                    <div class="gallery__inner container">
-                        <div class="swiper gallery__swiper">
-                            <div class="swiper-wrapper gallery__swiper-wrapper">
-                              <div class="swiper-slide gallery__swiper-slide">
-                                <div class="gallery__item">
-                                    <img src="./images/gallery/gallery-1.png" alt="" class="gallery__img">
-                                </div>
-                              </div>
-                              <div class="swiper-slide gallery__swiper-slide">
-                                <div class="gallery__item">
-                                    <img src="./images/gallery/gallery-2.png" alt="" class="gallery__img">
-                                </div>
-                              </div>
-                              <div class="swiper-slide gallery__swiper-slide">
-                                <div class="gallery__item">
-                                    <img src="./images/gallery/gallery-3.png" alt="" class="gallery__img">
-                                </div>
-                              </div>
-                              <div class="swiper-slide gallery__swiper-slide">
-                                <div class="gallery__item">
-                                    <img src="./images/gallery/gallery-4.png" alt="" class="gallery__img">
-                                </div>
-                              </div>
-                              <div class="swiper-slide gallery__swiper-slide">
-                                <div class="gallery__item">
-                                    <img src="./images/gallery/gallery-3.png" alt="" class="gallery__img">
-                                </div>
-                              </div>
-                              <div class="swiper-slide gallery__swiper-slide">
-                                <div class="gallery__item">
-                                    <img src="./images/gallery/gallery-4.png" alt="" class="gallery__img">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="gallery__bottom-action">
-                                <div class="gallery__btn-arrow">
-                                    <div class="swiper-button-prev gallery__swiper-button-prev"></div>
-                                    <div class="swiper-button-next gallery__swiper-button-next"></div>
-                                </div>
-    
-                                <div class="swiper-pagination gallery__swiper-pagination main-pagination"></div>
-                            </div>
+                        <div class="our-directions__btn-wrap">
+                            <button type="button" class="btn btn--light our-directions__btn" data-js-more-btn>Показать ещё</button>
                         </div>
-
                     </div>
                 </div>
             </section>
 
-            <section class="section">
-                <div class="section__header container">
-                    <h2 class="section__title title">Нас часто спрашивают</h2>
-
-                    <div class="section__header-action">
-                        <a href="/" class="section__header-link">Другие вопросы</a>
-                    </div>
-                </div>
-
-                <div class="faq">
-                    <div class="faq__inner container">
-                        <div class="accardion-list">
-                            <div class="accordion">
-                                <details class="accordion__details" open>
-                                    <summary class="accordion__summary">
-                                        <p class="accordion__summary-title">Какой уход осуществляется за животными во время поездки?</p>
-                                        <span class="accordion__icon"></span>
-                                    </summary>
-                                </details>
-                                <div class="accordion__content">
-                                    <div class="accordion__content-inner">
-                                        <div class="accordion__content-body">
-                                            <p class="accordion__text">Уход за питомцами в пути осуществляется в соответствии с правилами транспортировки данного вида животных. Во время длительных поездок предусмотрены остановки для кормления/поения/чистки боксов, а также для выгула взрослых собак. Щенкам и котятам производится замена пеленок + гигиеническая обработка транспортировочных контейнеров.
-                                            </p>
-                                            <p class="accordion__text">Питание малышей осуществляется в соответствии с рекомендациями отправителя сухим или влажным кормом заводского изготовления. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion">
-                                <details class="accordion__details">
-                                    <summary class="accordion__summary">
-                                        <p class="accordion__summary-title">Как выбрать сумку для перевозки собаки?</p>
-                                        <span class="accordion__icon"></span>
-                                    </summary>
-                                </details>
-                                <div class="accordion__content">
-                                    <div class="accordion__content-inner">
-                                        <div class="accordion__content-body">
-                                            <p class="accordion__text">Уход за питомцами в пути осуществляется в соответствии с правилами транспортировки данного вида животных. Во время длительных поездок предусмотрены остановки для кормления/поения/чистки боксов, а также для выгула взрослых собак. Щенкам и котятам производится замена пеленок + гигиеническая обработка транспортировочных контейнеров.
-                                            </p>
-                                            <p class="accordion__text">Питание малышей осуществляется в соответствии с рекомендациями отправителя сухим или влажным кормом заводского изготовления. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion">
-                                <details class="accordion__details">
-                                    <summary class="accordion__summary">
-                                        <p class="accordion__summary-title">Как правильно заполнить ветеринарный паспорт?</p>
-                                        <span class="accordion__icon"></span>
-                                    </summary>
-                                </details>
-                                <div class="accordion__content">
-                                    <div class="accordion__content-inner">
-                                        <div class="accordion__content-body">
-                                            <p class="accordion__text">Уход за питомцами в пути осуществляется в соответствии с правилами транспортировки данного вида животных. Во время длительных поездок предусмотрены остановки для кормления/поения/чистки боксов, а также для выгула взрослых собак. Щенкам и котятам производится замена пеленок + гигиеническая обработка транспортировочных контейнеров.
-                                            </p>
-                                            <p class="accordion__text">Питание малышей осуществляется в соответствии с рекомендациями отправителя сухим или влажным кормом заводского изготовления. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion">
-                                <details class="accordion__details">
-                                    <summary class="accordion__summary">
-                                        <p class="accordion__summary-title">Какие правила перевозки животных</p>
-                                        <span class="accordion__icon"></span>
-                                    </summary>
-                                </details>
-                                <div class="accordion__content">
-                                    <div class="accordion__content-inner">
-                                        <div class="accordion__content-body">
-                                            <p class="accordion__text">Уход за питомцами в пути осуществляется в соответствии с правилами транспортировки данного вида животных. Во время длительных поездок предусмотрены остановки для кормления/поения/чистки боксов, а также для выгула взрослых собак. Щенкам и котятам производится замена пеленок + гигиеническая обработка транспортировочных контейнеров.
-                                            </p>
-                                            <p class="accordion__text">Питание малышей осуществляется в соответствии с рекомендациями отправителя сухим или влажным кормом заводского изготовления. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="/" class="bottom-section-link">Другие вопросы</a>
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="section">
-                <div class="section__header container">
-                    <h2 class="section__title title">Полезные статьи</h2>
-
-                    <div class="section__header-action">
-                        <a href="/" class="section__header-link">Другие статьи</a>
-                    </div>
-                </div>
-
-                <div class="articles-main">
-                    <div class="articles-main_inner container">
-                        <ul class="articles-main__list articles-list">
-                            <li class="article-item">
-                                <a href="/" class="article-item__link">
-                                    <img src="./images/articles/articles-1.png" alt="" white="440" height="290" class="article-item__img">
-                                    <p class="article-item__title">Что такое перевозка в сопровождении</p>
-                                </a>
-                            </li>
-                            <li class="article-item">
-                                <a href="/" class="article-item__link">
-                                    <img src="./images/articles/articles-2.png" alt="" white="440" height="290" class="article-item__img">
-                                    <p class="article-item__title">Чем отличается перевозка CARGO от перевозки в отапливаемом отсеке самолета</p>
-                                </a>
-                            </li>
-                            <li class="article-item">
-                                <a href="/" class="article-item__link">
-                                    <img src="./images/articles/articles-3.png" alt="" white="440" height="290" class="article-item__img">
-                                    <p class="article-item__title">Правила перевозки животных в разные страны</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <a href="/" class="bottom-section-link">Другие статьи</a>
-                    </div>
-                </div>
-                
-            </section>
 
             <section class="section-bottom">
                 <div class="section-bottom__inner container">
@@ -981,7 +830,7 @@
                         <svg class="section-bottom__circle section-bottom__circle--2" width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="42" cy="42" r="42" fill="#4D67B3" />
                         </svg>
-                        <img src="./images/section-bottom/section-bottom-1.png" alt="" class="section-bottom__img">
+                        <img src="./images/section-bottom/section-bottom-2.png" alt="" class="section-bottom__img">
                     </div>
                 </div>
             </section>

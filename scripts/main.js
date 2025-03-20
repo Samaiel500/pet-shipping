@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 moreHiddenEl.forEach(el => {
                     el.classList.add('active');
                 })
-                moreBtn.classList.add('hidden')
+                moreBtn.classList.add('visually-hidden')
             })
         })
     }
